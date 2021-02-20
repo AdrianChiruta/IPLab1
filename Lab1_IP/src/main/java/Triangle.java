@@ -1,15 +1,23 @@
 public class Triangle extends Shape{
     private double base;
     private double height;
+    Triangle(){
+        base=0;
+        height=0;
+    }
     public Triangle setBase(double x){
-        Triangle triunghi= new Triangle();
-        triunghi.base=x;
-        return triunghi;
+
+        base=x;
+        onAreaChange();
+        return this;
     };
     public Triangle setHeight(double x){
-        Triangle triunghi= new Triangle();
-        triunghi.height=x;
-        return triunghi;
+
+        height=x;
+        onAreaChange();
+        return this;
     };
-    public void onAreaChange(){};
+    public void onAreaChange(){
+        area=base*height/2;
+    };
 }

@@ -1,5 +1,8 @@
 abstract public class Shape {
-    private double area;
+    protected double area;
+    Shape(){
+        area=0;
+    }
     public double getArea(){return area;};
     abstract void onAreaChange();
 }
